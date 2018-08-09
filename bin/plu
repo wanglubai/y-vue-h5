@@ -1,6 +1,9 @@
-const devFn = require('webpack-server');
-const program = require('commander')
-const build = require('build');
+#!/usr/bin/env node
+
+const devFn = require('./webpack-serve');
+const program =require('commander')
+const build = require('./build');
+
 program.version(require("../package").version)
   .usage('<command> [options]')
   .command('new', '生成新的component,container')
@@ -12,10 +15,9 @@ program.version(require("../package").version)
   .option('-x --pixel <pixel>', "REM项目基础值")
   .parse(process.argv);
 
+
 if (program.dev) {
   devFn(program.dev, program.port, program.type, program.pixel);
 }
 
-if (program.build) {
-  build(program.build, program.type, program.clean, program.pixel);
-}
+if(program.build) build(program.build, program.type, program.clean, program.pixel);

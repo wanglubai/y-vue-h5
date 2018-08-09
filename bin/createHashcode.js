@@ -1,10 +1,10 @@
 const crypto = require('crypto');
 
 function createHashCode(str) {
-  const secret = 'ya-vue';
+  const secret = 'longzhu-vue';
   const hash = crypto.createHmac('sha256', secret)
-    .update(str)
-    .digest('hex');
+                     .update(str)
+                     .digest('hex');
   return hash.substr(0, 11);
 }
 

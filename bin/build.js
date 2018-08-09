@@ -12,17 +12,51 @@ const _ = require('lodash');
 const uglifyJS = require("uglify-js");
 const chalk = require('chalk');
 
-function build(cmpt, type = "module", clean = false, pixel = 640) {
-  const config = require("webpack.config")();
-  const hashname = require('createHashcode')(moment().format('YYYY-MM'));
+function build(cmpt, type = "modules", clean = false, pixel = 640) {
+  const config = require("./webpack.config")();
+  const hashname = require('./createHashcode')(moment().format('YYYY-MM'));
 
+  // function eachDir(_path, arr) {
+  //   const dir = fs.readdirSync(_path);
+  //   _.each(dir, d => {
+  //     let info = fs.statSync( join(_path, d) );
+  //     if(info.isDirectory()) {
+  //       eachDir( join(_path, d) )
+  //     } else {
+  //       arr.push(join(_path, d));
+  //     }
 
+  //   })
+  // }
+
+  // var conn = new Client();
+  // conn.on('ready', function() {
+  //   console.log('Client :: ready');
+  //   conn.sftp(function(err, sftp) {
+  //     if (err) throw err;
+  //     var list = [];
+  //     eachDir('assets/vue', list);
+  //     console.log(list)
+  //   });
+  // }).connect({
+  //   host: '172.16.9.4',
+  //   port: 22,
+  //   username: 'root',
+  //   password: 'dvpVrF87sVsc24Qq'
+  // });
+  //   return;
   config.entry.app = [];
   config.entry.app.push(resolve(__dirname, `../src/${type}/${cmpt}/dev`));
+  //config.entry.vendor = [ resolve(__dirname, `../src/commons/fontsize.js`)];
   config.output.path = resolve(__dirname, `../assets/vue/${hashname}`);
   config.output.filename = `jsbin/${cmpt}/${cmpt}-[chunkhash:8].js`;
   config.output.publicPath = `//r.plures.net/vue/${hashname}/`;
-
+  // config.module.rules.push(
+  //   {
+  //     test:/\.styl$/,
+  //     use: ExtractTextPlugin.extract('vue-style-loader', 'css-loader!stylus-loader')
+  //   }
+  // )
   const vendorFiles = [`../src/commons/fontsize.js`, `../src/commons/flexfix.js`];
   const vendors = [];
   vendorFiles.forEach(function (filePath) {
@@ -30,39 +64,40 @@ function build(cmpt, type = "module", clean = false, pixel = 640) {
   });
 
   config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    }),
-    new HtmlWebpackPlugin({
-      template: resolve(__dirname, `../src/${type}/${cmpt}/dev.html`),
-      filename: `../../${cmpt}.html`,
-      inject: false,
-      vendor: uglifyJS.minify(
-        require("babel-core").transform(vendors.join(''), {
-          presets: ['es2015']
-        }).code, {
-          compress: {
-            dead_code: true,
-            drop_console: true,
-            global_defs: {
-              DEBUG: false,
-              PIXEL: pixel
-            }
-          },
-          fromString: true
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
         }
-      ).code
-    }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    new ExtractTextPlugin(`cssbin/${cmpt}/${cmpt}-[contenthash:8].css`),
-    new webpack.optimize.OccurrenceOrderPlugin(true)
+      }),
+      new webpack.LoaderOptionsPlugin({
+        minimize: true
+      }),
+      new HtmlWebpackPlugin({
+        template: resolve(__dirname, `../src/${type}/${cmpt}/dev.html`),
+        filename: `../../${cmpt}.html`,
+        inject: false,
+        vendor: uglifyJS.minify(
+            require("babel-core").transform(vendors.join(''), {
+              presets: ['es2015']
+            }).code, {
+              compress: {
+                dead_code: true,
+                drop_console: true,
+                global_defs: {
+                  DEBUG: false,
+                  PIXEL: pixel
+                }
+              },
+              fromString: true
+            }
+        ).code
+      }),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production')
+      }),
+      new ExtractTextPlugin(`cssbin/${cmpt}/${cmpt}-[contenthash:8].css`),
+      new webpack.optimize.OccurrenceOrderPlugin(true)
+      //new ExtractTextPlugin(`cssbin/${cmpt}/${cmpt}-[hash].css`)
   )
   config.module.rules.push({
     test: /\.vue$/,
@@ -134,6 +169,8 @@ function build(cmpt, type = "module", clean = false, pixel = 640) {
         shelljs.exec(`echo //r.plures.net/vue/${hashname}/${file} >> ./assets/${cmpt}.txt`);
       })
     })
+    // shelljs.exec(`echo //r.plures.net/vue/${hashname}/jsbin/${cmpt}/${cmpt}-${stats.hash}.js > ./assets/${cmpt}.txt` );
+    // shelljs.exec(`echo //r.plures.net/vue/${hashname}/cssbin/${cmpt}/${cmpt}-${stats.hash}.css >> ./assets/${cmpt}.txt` );
     process.stdout.write(stats.toString({
       colors: true,
       modules: false,
