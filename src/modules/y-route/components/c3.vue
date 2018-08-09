@@ -1,5 +1,5 @@
 <template>
-  <div>c2-content</div>
+  <div>c3-content</div>
 </template>
 
 <script>
