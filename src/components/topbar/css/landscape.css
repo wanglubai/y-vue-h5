@@ -1,0 +1,41 @@
+body{
+  margin: 0 auto !important;
+  
+}
+.landscapeMask{
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 197;
+  display: block;
+}
+.landscape.maskShow{
+  display: block;
+}
+.landscape{
+  width: 180px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  margin-left: -90px;
+  margin-top: -150px;
+  background: url('../images/landscape.png') no-repeat;
+  background-size:180px 300px; 
+  z-index: 198;
+}
+.landscape-close{
+  width: 24px;
+  height: 24px;
+  background: url('../images/landscape_close.png') no-repeat;
+  background-size:24px 24px; 
+  z-index: 199;
+  position: absolute;
+  right: 23px;
+  top: 20px;
+
+}

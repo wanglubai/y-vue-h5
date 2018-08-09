@@ -1,0 +1,174 @@
+/*stylus*/
+/*.host-lv
+  display: inline-block
+  background-image: url('../image/icon_host-lv1-40.png')
+  background-repeat: no-repeat
+  width: 41px;
+  height: 16px
+
+for $index in (1...41)
+  .host-lv-{$index}
+    background-position:0px (-(18*($index - 1))px) */
+
+/*css*/
+
+.host-lv {
+  display: inline-block;
+  background-image: url(http://r.plures.net/pt/images/common/icon_host-lv1-50.png);
+  background-repeat: no-repeat;
+  width: 41px;
+  height: 16px;
+  background-position: 0 -900px;
+  vertical-align: middle;
+}
+
+.host-lv-1 {
+  background-position:0 0
+}
+.host-lv-2 {
+  background-position:0 -18px
+}
+.host-lv-3 {
+  background-position:0 -36px
+}
+.host-lv-4 {
+  background-position:0 -54px
+}
+.host-lv-5 {
+  background-position:0 -72px
+}
+.host-lv-6 {
+  background-position:0 -90px
+}
+.host-lv-7 {
+  background-position:0 -108px
+}
+.host-lv-8 {
+  background-position:0 -126px
+}
+.host-lv-9 {
+  background-position:0 -144px
+}
+.host-lv-10 {
+  background-position:0 -162px
+}
+.host-lv-11 {
+  background-position:0 -180px
+}
+.host-lv-12 {
+  background-position:0 -198px
+}
+.host-lv-13 {
+  background-position:0 -216px
+}
+.host-lv-14 {
+  background-position:0 -234px
+}
+.host-lv-15 {
+  background-position:0 -252px
+}
+.host-lv-16 {
+  background-position:0 -270px
+}
+.host-lv-17 {
+  background-position:0 -288px
+}
+.host-lv-18 {
+  background-position:0 -306px
+}
+.host-lv-19 {
+  background-position:0 -324px
+}
+.host-lv-20 {
+  background-position:0 -342px
+}
+.host-lv-21 {
+  background-position:0 -360px
+}
+.host-lv-22 {
+  background-position:0 -378px
+}
+.host-lv-23 {
+  background-position:0 -396px
+}
+.host-lv-24 {
+  background-position:0 -414px
+}
+.host-lv-25 {
+  background-position:0 -432px
+}
+.host-lv-26 {
+  background-position:0 -450px
+}
+.host-lv-27 {
+  background-position:0 -468px
+}
+.host-lv-28 {
+  background-position:0 -486px
+}
+.host-lv-29 {
+  background-position:0 -504px
+}
+.host-lv-30 {
+  background-position:0 -522px
+}
+.host-lv-31 {
+  background-position:0 -540px
+}
+.host-lv-32 {
+  background-position:0 -558px
+}
+.host-lv-33 {
+  background-position:0 -576px
+}
+.host-lv-34 {
+  background-position:0 -594px
+}
+.host-lv-35 {
+  background-position:0 -612px
+}
+.host-lv-36 {
+  background-position:0 -630px
+}
+.host-lv-37 {
+  background-position:0 -648px
+}
+.host-lv-38 {
+  background-position:0 -666px
+}
+.host-lv-39 {
+  background-position:0 -684px
+}
+.host-lv-40 {
+  background-position:0 -702px
+}
+.host-lv-41 {
+  background-position:0 -720px
+}
+.host-lv-42 {
+  background-position:0 -738px
+}
+.host-lv-43 {
+  background-position:0 -756px
+}
+.host-lv-44 {
+  background-position:0 -774px
+}
+.host-lv-45 {
+  background-position:0 -792px
+}
+.host-lv-46 {
+  background-position:0 -810px
+}
+.host-lv-47 {
+  background-position:0 -828px
+}
+.host-lv-48 {
+  background-position:0 -846px
+}
+.host-lv-49 {
+  background-position:0 -864px
+}
+.host-lv-50 {
+  background-position:0 -882px
+}

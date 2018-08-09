@@ -1,0 +1,78 @@
+.footer {
+  width: 640px;
+  height: 162px;
+}
+
+.footer-item-1 {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  margin-top: 20px;
+}
+
+.footer-download {
+  display: block;
+  width: 145px;
+  height: 40px;
+  margin-right: 58px;
+  position: relative;
+}
+
+.footer-top {
+  display: block;
+  width: 145px;
+  height: 40px;
+  position: relative;
+}
+
+.footer-download-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: url('../../../commons/images/sprite-figure.png');
+  background-position: 10px 0;
+  background-size: 500px 545px;
+}
+
+.footer-download-txt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  color: #2d3c4e;
+  line-height: 40px;
+}
+
+.footer-top-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: url('../../../commons/images/sprite-figure.png');
+  background-position: -30px 0;
+  background-size: 500px 545px;
+}
+
+.footer-top-txt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  color: #2d3c4e;
+  line-height: 40px;
+}
+
+.footer-item-2{
+  margin-top: 20px;
+}
+
+.footer-item-2 p{
+font-size:20px;
+color:#2d3c4e;
+letter-spacing:0px;
+line-height:32px;
+text-align:center;
+}
+
+.footer-item-1.hide-download .footer-download {
+  display: none;
+}

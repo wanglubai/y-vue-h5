@@ -1,0 +1,20 @@
+#video1 {
+    position: relative;
+}
+
+#video_txt {
+    font-size: 30px;
+    color: #ff0000;
+    position: absolute;
+}
+
+#canvasId {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+}
+
+#video-view {
+    width: 500px;
+    height: 300px;
+}

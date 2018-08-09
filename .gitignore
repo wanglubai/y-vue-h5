@@ -1,0 +1,7 @@
+node_modules
+
+assets
+./bifrost.json
+.vscode
+.idea
+*.eslintrc.js

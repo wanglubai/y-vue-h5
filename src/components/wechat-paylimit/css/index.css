@@ -1,0 +1,56 @@
+.recharge-ul  {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recharge-ul .recharge-item {
+  flex: 1;
+}
+
+.recharge-ul .recharge-item {
+  padding: 3% 0;
+  text-align: center;
+  font-size: 24px;
+  margin: 10px;
+  border: 1px solid #e1e1e1;/*no*/
+  border-radius: 8px;
+  width: 150px;
+}
+
+.recharge-ul .recharge-item.recharge-item-current {
+  border-color: #ff7e00;
+}
+
+.recharge-item-virtual-coin {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.recharge-item-coin {
+  color: #ff7e00;
+}
+
+.virtual-coin {
+  font-weight: bold;
+  color: #6c7683;
+  margin-right: 5px;
+}
+
+.recharge-item-current .virtual-coin {
+  color: #ff7e00;
+}
+
+.reality-coin {
+  margin-right: 3px;
+}
+
+.i-unit {
+  background: url('../../../commons/images/sprite-figure.png');
+  background-position: -470px 215px;
+  background-size: 500px 545px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}

@@ -1,0 +1,37 @@
+$userLvIconUrl = "../../../commons/images/icon_user_lv1-90.png";
+
+.user-lv
+  display: inline-block
+  width: 72px
+  height: 32px
+  background-image: url($userLvIconUrl)
+  background-repeat: no-repeat
+  background-size: 800px 360px
+  vertical-align: middle
+
+for $index in (0...10)
+  .user-lv-{$index +  1}
+    background-position: -(80 * $index)px 0
+  .user-lv-{$index + 11}
+    background-position: -(80 * $index)px -40px
+  .user-lv-{$index + 21}
+    background-position: -(80 * $index)px -80px
+  .user-lv-{$index + 31}
+    background-position: -(80 * $index)px -120px
+  .user-lv-{$index + 41}
+    background-position: -(80 * $index)px -160px
+  .user-lv-{$index + 51}
+    background-position: -(80 * $index)px -200px
+  .user-lv-{$index + 61}
+    background-position: -(80 * $index)px -240px
+  .user-lv-{$index + 71}
+    background-position: -(80 * $index)px -280px
+  .user-lv-{$index + 81}
+    background-position: -(80 * $index)px -320px
+
+for $index in (90...151)
+  .user-lv-{$index}
+    background: url("http://r.plures.net/pt/images/common/lv"+ $index +".gif") no-repeat center top;
+    background-size: contain
+
+  
