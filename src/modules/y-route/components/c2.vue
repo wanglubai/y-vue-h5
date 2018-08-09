@@ -1,10 +1,9 @@
 <template>
-  <div>aaa</div>
+  <div>c2-content</div>
 </template>
 
 <script>
 export default {
-  data() {
-  }
+  data() {}
 };
 </script>

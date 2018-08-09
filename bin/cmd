@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const devFn = require('./webpack-serve');
-const program =require('commander')
+const devFn = require('./dev');
+const cmd = require('commander')
 const build = require('./build');
 
-program.version(require("../package").version)
+cmd.version(require("../package").version)
   .usage('<command> [options]')
   .command('new', '生成新的component,container')
   .option('-b, --build <component>', '打包component')
@@ -16,8 +16,8 @@ program.version(require("../package").version)
   .parse(process.argv);
 
 
-if (program.dev) {
-  devFn(program.dev, program.port, program.type, program.pixel);
+if (cmd.dev) {
+  devFn(cmd.dev, cmd.port, cmd.type, cmd.pixel);
 }
 
-if(program.build) build(program.build, program.type, program.clean, program.pixel);
+if (cmd.build) build(cmd.build, cmd.type, cmd.clean, cmd.pixel);
