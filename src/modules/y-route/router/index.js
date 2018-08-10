@@ -4,7 +4,7 @@ import c3 from '../components/c3.vue';
 import vueRouter from "vue-router";
 
 const routes = [{
-    path: '/c1',
+    path: '/c1:id',
     name: 'c1',
     component: c1
   },

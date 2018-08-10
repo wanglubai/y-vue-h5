@@ -1,5 +1,5 @@
 <template>
-  <div>c1{{username}}</div>
+  <div>c1{{$route.params.id}}</div>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
   },
   computed: {
     username() {
-      return this.$route.params.username;
+      return this.$route.params.id;
     }
   }
 };
