@@ -1,0 +1,9 @@
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+a {
+  text-decoration: none;
+  color: #34495e;
+}

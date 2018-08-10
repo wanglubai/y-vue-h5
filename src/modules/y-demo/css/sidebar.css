@@ -1,0 +1,32 @@
+.sidebar {
+  position: fixed;
+  z-index: 10;
+  background-color: #f9f9f9;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+  transform: translate(0, 0);
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  line-height: 100px;
+  padding-left: 100px;
+}
+
+.sidebar-inner-index {
+  padding: 10px 10px 10px 20px;
+}
+
+.sidebar li {
+  margin-top: 60px;
+}
+
+.nav-link {
+  padding-bottom: 3px;
+  white-space: nowrap;
+}
