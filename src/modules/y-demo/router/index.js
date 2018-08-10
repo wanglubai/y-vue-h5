@@ -1,6 +1,6 @@
 import vueRouter from "vue-router";
-import template from "../components/template.vue";
-import vfor from "../components/v-for.vue";
+import template from "../components/b-template.vue";
+import vfor from "../components/b-vfor.vue";
 
 let routes = [];
 let vms = [];
@@ -36,8 +36,8 @@ let up = {
 }
 
 
-routes = routes.concat(routes, base['list'], up['list']);
-vms.push(base,up);
+routes = routes.concat(routes, base['list'], up['list'], up['list'], up['list'], up['list'], up['list'], up['list'], up['list'], up['list']);
+vms.push(base,up,up,up,up,up,up,up,up);
 
 let routeVo = {
   'routes': routes,

@@ -1,11 +1,11 @@
 <template>
   <div>
     <div id="mobile-bar" class="top">
-      <a class="menu-button"></a>
-      <a class="logo" href="/"></a>
+      <a class="menu-button">1</a>
+      <a class="logo" href="/">1</a>
     </div>
 
-    <div class="sidebar open">
+    <div class="sidebar" v-bind:class="{open: sidebarOpen}">
       <div class="sidebar-inner-index">
         <ul class="main-menu">
 
@@ -23,9 +23,13 @@
         </ul>
       </div>
     </div>
+
+    <div v-on:click="clickFun" class="content">
     <transition>
       <router-view></router-view>
     </transition>
+    </div>
+  
   </div>
 </template>
 
@@ -38,9 +42,14 @@ import "./css/common.css";
 export default {
   data() {
     return {
-      routeVms: routeVo["vms"]
+      routeVms: routeVo["vms"],
+      sidebarOpen: false
     };
   },
-  methods: {}
+  methods: {
+    clickFun() {
+      this.sidebarOpen = false;
+    }
+  }
 };
 </script>
