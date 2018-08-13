@@ -42,7 +42,7 @@ let base = {
     path: '/bfor',
     name: 'bfor',
     component: bfor,
-    msg: 'for列表'
+    msg: '列表渲染'
   }, {
     path: '/bevent',
     name: 'bevent',

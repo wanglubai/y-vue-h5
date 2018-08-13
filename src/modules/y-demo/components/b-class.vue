@@ -1,23 +1,34 @@
 <template>
   <div>
-    <h2>class</h2>
-    <p class="y-node">字符串绑定</p>
+    <p class="y-title">字符串绑定</p>
     <p class="y-html">
-      {{msg1}}
+      <pre>
+<span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"Var_String"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
+      </pre>
     </p>
-    <p class="y-node">对象绑定</p>
+    <p class="y-title">对象绑定</p>
     <p>1.内联对象</p>
     <p class="y-html">
-      {{msg2}}
+      <pre>
+<span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"{ Class_Name: Var_Boolean }"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
+      </pre>
     </p>
      <p>2.非内联对象</p>
     <p class="y-html">
-      {{msg3}}<br>
-      {{msg4}}
+       <pre>
+<span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"Var_Obj"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
+      </pre>
     </p>
-    <p class="y-node">数组绑定</p>
+       <p class="y-js">
+      <pre>
+<span class="line">Var_Obj={ Class_Name: Var_Boolean }</span>
+      </pre>
+    </p>
+      <p class="y-title">数组绑定</p>
     <p class="y-html" :class="[atr1,atr2,{'atr3':atr3v}]">
-      {{msg5}}
+      <pre>
+<span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[{ Class_Name: Var_Boolean }, Var_Obj,Var_String]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
+      </pre>
     </p>
 
   </div>
