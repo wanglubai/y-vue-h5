@@ -1,43 +1,63 @@
 import vueRouter from "vue-router";
-import template from "../components/b-template.vue";
-import vfor from "../components/b-vfor.vue";
+
+import cMvvm from "../components/c-mvvm.vue";
+
+import btemplate from "../components/b-template.vue";
+import bclass from "../components/b-class.vue";
+import bif from "../components/b-if.vue";
+import bfor from "../components/b-for.vue";
+import bevent from "../components/b-event.vue";
 
 let routes = [];
 let vms = [];
 
+let core = {
+  'title': '核心',
+  list: [{
+    path: '/cMvvm',
+    name: 'cMvvm',
+    component: cMvvm,
+    msg: 'MVVM'
+  }, ]
+}
+
 let base = {
   'title': '基础',
   list: [{
-    path: '/template',
-    name: 'template',
-    component: template,
+    path: '/btemplate',
+    name: 'btemplate',
+    component: btemplate,
     msg: '模板语法'
   }, {
-    path: '/vfor',
-    name: 'vfor',
-    component: vfor,
-    msg: 'v-for'
+    path: '/bclass',
+    name: 'bclass',
+    component: bclass,
+    msg: 'class绑定'
+  }, {
+    path: '/bif',
+    name: 'bif',
+    component: bif,
+    msg: '条件渲染'
+  }, {
+    path: '/bfor',
+    name: 'bfor',
+    component: bfor,
+    msg: 'for列表'
+  }, {
+    path: '/bevent',
+    name: 'bevent',
+    component: bevent,
+    msg: '事件模型'
   }]
 }
 
-let up = {
-  'title': '进阶',
-  list: [{
-    path: '/template',
-    name: 'template',
-    component: template,
-    msg: '模板语法'
-  }, {
-    path: '/vfor',
-    name: 'vfor',
-    component: vfor,
-    msg: 'v-for'
-  }]
+let use={
+  'title': 'demo',
+  list:[]
 }
 
-
-routes = routes.concat(routes, base['list'], up['list'], up['list'], up['list'], up['list'], up['list'], up['list'], up['list'], up['list']);
-vms.push(base,up,up,up,up,up,up,up,up);
+routes = routes.concat(routes, core['list'], base['list'],use['list']);
+vms.push(core, base,use);
 
 let routeVo = {
   'routes': routes,

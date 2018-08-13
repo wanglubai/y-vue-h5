@@ -1,27 +1,33 @@
 body{
   width: 640px;
-  background-color: aquamarine;
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
+  font-size: 20px;
+  font-family: 'PingFang SC','Helvetica Neue','Helvetica','Arial',sans-serif;
 }
-.content {
-  width: 640px;
+.y-content {
+  width: 600px;
   height: 100%;
+  padding: 20px;
+  overflow:hidden;
 }
 #mobile-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 200px;
-  background-color: #f00;
+  height: 68px;
+  background-color: #fff;
   z-index: 9;
   box-shadow: 0 0 2px rgba(0,0,0,0.25);
 }
 #mobile-bar .menu-button {
   position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 8px;
+  width: 48px;
+  height: 48px;
+  top: 10px;
   left: 12px;
   background: url(../images/menu.png) center center no-repeat;
-  background-size: 24px;
+  background-size: 48px;
 }

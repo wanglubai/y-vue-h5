@@ -1,0 +1,18 @@
+.c-mvvm-mvimg {
+    width: 493px;
+    height: 168px;
+    background: url(../../images/v-mvvm/core-mv.jpg) center center no-repeat;
+    background-size:493px 168px; 
+}
+.c-mvvm-mvc{
+    width: 581px;
+    height: 399px;
+    background: url(../../images/v-mvvm/core-mvc.jpg) center center no-repeat;
+    background-size:581px 399px; 
+}
+.c-mvvm-mvvm{
+    width: 600px;
+    height: 441px;
+    background: url(../../images/v-mvvm/core-mvvm.png) center center no-repeat;
+    background-size:600px 441px;
+}
