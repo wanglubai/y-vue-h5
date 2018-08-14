@@ -31,7 +31,7 @@
     </p>
     <p class="y-title">v-show</p>
     <p>
-      不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS 属性 display。注意，v-show 不支持 <code>template</code> 元素，也不支持 <code>v-else</code>。
+      v-show 只是简单地切换元素的 CSS 属性 display。注意，v-show 不支持 <code>template</code> 元素，也不支持 <code>v-else</code>。
     </p>
        <p class="y-html">
    <pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-show</span>=<span class="string">"ok"</span>&gt;</span>Hello!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre>

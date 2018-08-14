@@ -10,22 +10,23 @@
     <p class="y-title">v-once 一次性插值</p>
     <p class="y-html">
        <pre>
-<span class="line"><span class="tag">&lt;<span class="name">div v-once</span><span class="string" v-html="'{{ VAR }}'"></span></span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
+<span class="line"><span class="tag">&lt;<span class="name">div v-once</span>&gt;<span class="string" v-html="'{{ VAR }}'"></span></span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
       </pre>
     </p>
 
     <p class="y-title">原始html</p>
     <p class="y-html">
-       <pre>
-<span class="line"><span class="tag">&lt;<span class="name">div v-bind:id=</span><span class="string">"VAR"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
+         <pre>
+<span class="line"><span class="tag">&lt;<span class="name">div v-html=</span><span class="string">"VAR"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
       </pre>
     </p>
 
     <p>1.Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用<code> v-bind</code> 指令</p>
     <p class="y-html">
-       <pre>
-<span class="line"><span class="tag">&lt;<span class="name">div v-html=</span><span class="string">"VAR"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
+         <pre>
+<span class="line"><span class="tag">&lt;<span class="name">div v-bind:id=</span><span class="string">"VAR"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
       </pre>
+  
     </p>
 
     <p>2.js单个表达式</p>

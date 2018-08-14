@@ -7,7 +7,10 @@ import bclass from "../components/b-class.vue";
 import bif from "../components/b-if.vue";
 import bfor from "../components/b-for.vue";
 import bevent from "../components/b-event.vue";
-
+import bfun from "../components/b-fun.vue";
+import ccycle from "../components/c-cycle.vue";
+import zcombase from "../components/z-com-base.vue";
+import ecomponent from "../components/e-component.vue"
 let routes = [];
 let vms = [];
 
@@ -18,7 +21,12 @@ let core = {
     name: 'cMvvm',
     component: cMvvm,
     msg: 'MVVM'
-  }, ]
+  }, {
+    path: '/ccycle',
+    name: 'ccycle',
+    component: ccycle,
+    msg: '生命周期'
+  }]
 }
 
 let base = {
@@ -28,6 +36,11 @@ let base = {
     name: 'btemplate',
     component: btemplate,
     msg: '模板语法'
+  }, {
+    path: '/bfun',
+    name: 'bfun',
+    component: bfun,
+    msg: '数据调用'
   }, {
     path: '/bclass',
     name: 'bclass',
@@ -47,17 +60,32 @@ let base = {
     path: '/bevent',
     name: 'bevent',
     component: bevent,
-    msg: '事件模型'
+    msg: '事件处理'
   }]
 }
 
-let use={
-  'title': 'demo',
-  list:[]
+let component = {
+  'title': '组件',
+  list: [{
+    path: '/zcombase',
+    name: 'zcombase',
+    component: zcombase,
+    msg: '基础'
+  }]
 }
 
-routes = routes.concat(routes, core['list'], base['list'],use['list']);
-vms.push(core, base,use);
+let example = {
+  'title': '实例',
+  list: [{
+    path: '/ecomponent',
+    name: 'ecomponent',
+    component: ecomponent,
+    msg: '组件'
+  }]
+}
+
+routes = routes.concat(routes, core['list'], base['list'], component['list'],example['list']);
+vms.push(core, base, component,example);
 
 let routeVo = {
   'routes': routes,
