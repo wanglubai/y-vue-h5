@@ -105,10 +105,17 @@ pre {
 pre .function .keyword, pre .constant {
   color: #0092db;
 }
-pre .symbol, pre .symbol .string, pre .value, pre .regexp {
+pre .symbol, pre .symbol .string, pre .value, pre .regexp ,pre .built_in{
   color: #42b983;
 }
 
+pre .comment{
+  color: #b3b3b3;
+}
+
+pre .number, pre .literal {
+  color: #ae81ff;
+}
 
 pre .tag {
   color: #2973b7;

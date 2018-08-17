@@ -10,6 +10,7 @@ import bevent from "../components/b-event.vue";
 import bfun from "../components/b-fun.vue";
 import ccycle from "../components/c-cycle.vue";
 import zcombase from "../components/z-com-base.vue";
+import zcomprops from "../components/z-com-props.vue";
 import ecomponent from "../components/e-component.vue"
 let routes = [];
 let vms = [];
@@ -40,7 +41,7 @@ let base = {
     path: '/bfun',
     name: 'bfun',
     component: bfun,
-    msg: '数据调用'
+    msg: '数据绑定'
   }, {
     path: '/bclass',
     name: 'bclass',
@@ -71,6 +72,11 @@ let component = {
     name: 'zcombase',
     component: zcombase,
     msg: '基础'
+  },{
+    path: '/zcomprops',
+    name: 'zcomprops',
+    component: zcomprops,
+    msg: 'props'
   }]
 }
 
@@ -84,8 +90,17 @@ let example = {
   }]
 }
 
-routes = routes.concat(routes, core['list'], base['list'], component['list'],example['list']);
-vms.push(core, base, component,example);
+let vuex={
+  'title':'VueX',
+  list: [{
+    path: '/ecomponent',
+    name: 'ecomponent',
+    component: ecomponent,
+    msg: '组件'
+  }]
+}
+routes = routes.concat(routes, core['list'], base['list'], component['list'],example['list'],vuex['list']);
+vms.push(core, base, component,example,vuex);
 
 let routeVo = {
   'routes': routes,

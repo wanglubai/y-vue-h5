@@ -1,7 +1,6 @@
 <template>
   <div>
-    <a>{{count_}}</a>
-    <button @click="count_++">按钮</button>
+    temp1
   </div>
 </template>
 
@@ -9,19 +8,31 @@
 export default {
   data() {
     return {
-      count_: this.count
     };
   },
-  methods: {
-    countFun() {
-      this.count_++;
-    }
+ beforeCreate: function() {
+    console.log("temp1-beforeCreate");
   },
-  props: {
-    count: {
-      type: Number
-    }
+  created: function() {
+    console.log("temp1-created");
   },
-  computed: {}
+  beforeMount: function() {
+    console.log("temp1-beforeMount");
+  },
+  mounted: function() {
+    console.log("temp1-mounted");
+  },
+  beforeUpdate: function() {
+    console.log("temp1-beforeUpdate");
+  },
+  updated: function() {
+    console.log("temp1-updated");
+  },
+  beforeDestroy: function() {
+    console.log("temp1-beforeDestroy");
+  },
+  destroyed: function() {
+    console.log("temp1-destroyed");
+  }
 };
 </script>
