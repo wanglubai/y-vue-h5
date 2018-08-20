@@ -1,24 +1,24 @@
 <template>
-  <div>
-      <p class="y-title">Init</p>
-    <p class="y-html">
-      <pre>
+<div>
+  <p class="y-title">Init</p>
+  <p class="y-html">
+    <pre>
   <span class="line">props: [<span class="string">'key','key','key'</span>]</span>
-      </pre>
-    </p>
+    </pre>
+  </p>
 
-        <p class="y-js">
-      <pre>
+  <p class="y-js">
+    <pre>
 <span class="line">  props: {</span>
   <span class="line">  key: <span class="built_in">DataType</span>,</span>
   <span class="line">  key: <span class="built_in">DataType</span>,</span>
   <span class="line">  key: <span class="built_in">DataType</span></span>
   <span class="line">}</span>
-      </pre>
-    </p>
+    </pre>
+  </p>
 
-      <p class="y-js">
-      <pre>
+  <p class="y-js">
+    <pre>
 <span class="line">  props: {</span>
 <span class="line">    key: <span class="built_in">DataType</span>,</span>
 <span class="line">    key: [<span class="built_in">DataType</span>, <span class="built_in">DataType</span>],</span>
@@ -40,22 +40,22 @@
 <span class="line">     }</span>   
 <span class="line">    }</span>   
 <span class="line"> })</span>   
-      </pre>
-    </p>
-<p class="y-title">DataType</p>
-<ul>
-<li><code>String</code></li>
-<li><code>Number</code></li>
-<li><code>Boolean</code></li>
-<li><code>Array</code></li>
-<li><code>Object</code></li>
-<li><code>Date</code></li>
-<li><code>Function</code></li>
-<li><code>Symbol</code></li>
-</ul>
-<p class="y-title">单项数据流</p>
-<p class="y-title">keep-alive</p>
-  </div>
+    </pre>
+  </p>
+  <p class="y-title">DataType</p>
+  <ul>
+    <li><code>String</code></li>
+    <li><code>Number</code></li>
+    <li><code>Boolean</code></li>
+    <li><code>Array</code></li>
+    <li><code>Object</code></li>
+    <li><code>Date</code></li>
+    <li><code>Function</code></li>
+    <li><code>Symbol</code></li>
+  </ul>
+  <p class="y-title">单项数据流</p>
+  <p class="y-title">keep-alive</p>
+</div>
 </template>
 
 <script>

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import "./css/b-fun.css";
+import "../css/b-fun.css";
 
 export default {
   data: function() {

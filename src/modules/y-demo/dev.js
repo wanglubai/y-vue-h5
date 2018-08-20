@@ -20,8 +20,13 @@ const store = new Vuex.Store({
     count: 0
   },
   mutations: {
-    increment (state) {
-      state.count++
+    increment (state,obj) {
+      state.count+=obj.val
+    }
+  },
+  getters:{
+    getTodoById:function (state){
+      return state.count+1;
     }
   }
 })

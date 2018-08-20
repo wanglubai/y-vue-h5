@@ -2,16 +2,21 @@ import vueRouter from "vue-router";
 
 import cMvvm from "../components/c-mvvm.vue";
 
-import btemplate from "../components/b-template.vue";
-import bclass from "../components/b-class.vue";
-import bif from "../components/b-if.vue";
-import bfor from "../components/b-for.vue";
-import bevent from "../components/b-event.vue";
-import bfun from "../components/b-fun.vue";
+import btemplate from "../components/base/b-template.vue";
+import bclass from "../components/base/b-class.vue";
+import bif from "../components/base/b-if.vue";
+import bfor from "../components/base/b-for.vue";
+import bevent from "../components/base/b-event.vue";
+import bfun from "../components/base/b-fun.vue";
+
 import ccycle from "../components/c-cycle.vue";
-import zcombase from "../components/z-com-base.vue";
-import zcomprops from "../components/z-com-props.vue";
-import ecomponent from "../components/e-component.vue"
+
+import ecomponent from "../components/e-component.vue";
+
+import zcomevent from "../components/zcom/z-com-event.vue";
+import zcombase from "../components/zcom/z-com-base.vue";
+import zcomprops from "../components/zcom/z-com-props.vue";
+import zcomslot from "../components/zcom/z-com-slot.vue";
 let routes = [];
 let vms = [];
 
@@ -77,6 +82,16 @@ let component = {
     name: 'zcomprops',
     component: zcomprops,
     msg: 'props'
+  },{
+    path: '/zcomevent',
+    name: 'zcomevent',
+    component: zcomevent,
+    msg: 'event'
+  },{
+    path: '/zcomslot',
+    name: 'zcomslot',
+    component: zcomslot,
+    msg: 'slot'
   }]
 }
 
