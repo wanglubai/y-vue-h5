@@ -1,12 +1,3 @@
-import Vue from 'vue';
-import App from './index.vue';
-
-import vueRouter from "vue-router";
-import router from "./router";
-
-Vue.use(vueRouter);
-
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount("#app")
+// import a from "./basic/test";
+// import a from "./named-routes/test";
+import a from "./hash-mode/test"

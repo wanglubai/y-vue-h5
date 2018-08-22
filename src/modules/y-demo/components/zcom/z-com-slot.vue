@@ -3,7 +3,7 @@
   <p class="y-title">插槽的默认内容</p>
   <p class="y-html">
     <pre>
-    <span class="line"><span class="tag">&lt;<span class="name">slot</span>&gt;</span>.....<span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span>
+    <span class="line"><span class="tag">&lt;<span class="name">slot</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span>
     </pre>
   </p>
   </p>
@@ -24,7 +24,7 @@
   </pre>
   </p>
 
-  <zcomslotname>
+  <zcomslotname class='demo'>
     <p slot='n3'>4</p>
     <template slot="n1">
       <p>1</p>
@@ -34,7 +34,7 @@
 
   </zcomslotname>
 
-  <p class="y-title">作用域</p>
+  <p class="y-title">作用域插槽</p>
 
 </div>
 </template>

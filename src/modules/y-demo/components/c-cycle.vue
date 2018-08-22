@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h2>class绑定</h2>
-  </div>
+<div>
+  <h2>cccccc</h2>
+</div>
 </template>
 
 <script>
@@ -9,6 +9,15 @@ export default {
   data() {
     return {};
   },
-  computed: {}
+  computed: {},
+  // beforeRouteEnter(to, from, next) {
+  //   console.log(from);
+  // },
+  // beforeRouteUpdate(to, from, next) {
+  //    console.log(from);
+  // },
+  // beforeRouteLeave(to, from, next) {
+  //    console.log(from);
+  // }
 };
 </script>

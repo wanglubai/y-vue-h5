@@ -14,9 +14,11 @@
       </pre>
   </p>
 
+<div class="demo">
   <p>{{vmodelCall}}</p>
   <vmodel v-model='vmodel'></vmodel>
   <vmodel v-model='vmodel'></vmodel>
+</div>
 </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+  {{username}}
     <p class="y-title">Mustache 语法</p>
     <p class="y-html">
       <pre>
@@ -61,6 +62,11 @@ export default {
       msg2: "{{ VAR.split('').reverse().join('') }}"
     };
   },
-  computed: {}
+  computed: {
+    username(){
+      console.log(this.$route.params);
+      return this.$route.params;
+    }
+  }
 };
 </script>

@@ -15,6 +15,12 @@ const router = new vueRouter({
   routes
 });
 
+router.beforeEach((to, from, next) => {
+  next();
+})
+router.afterEach((to, from) => {
+})
+
 const store = new Vuex.Store({
   state: {
     count: 0

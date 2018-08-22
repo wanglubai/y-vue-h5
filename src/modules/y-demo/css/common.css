@@ -124,3 +124,17 @@ pre .tag {
 pre .string {
   color: #42b983;
 }
+.demo{
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+.demo:before{
+  content: "DEMO";
+  position: relative;
+  left: 500px;
+  color: #aaa;
+  font-size: 18px;
+}
+.router-link-active{
+  color: #ff0000;
+}

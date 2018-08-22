@@ -9,7 +9,7 @@
         <ul class="main-menu">
 
           <li class="nav-dropdown-container learn" v-for="routeVm in routeVms">
-            <a class="nav-link">{{routeVm['title']}}</a><span class="arrow"></span>
+            <h4 class="nav-link a-nav-link">{{routeVm['title']}}</h4><span class="arrow"></span>
             <ul class="nav-dropdown">
               <li>
                 <ul>
@@ -28,6 +28,7 @@
       <router-view></router-view>
     </transition>
     </div>
+    {{`${username}as`}}
   
   </div>
 </template>
@@ -44,6 +45,12 @@ export default {
       routeVms: routeVo["vms"],
       sidebarOpen: false
     };
+  },
+  computed:{
+    username(){
+      console.log(this.$route.name);
+      return this.$route.name;
+    }
   },
   methods: {
     sidebarCloseFun() {
