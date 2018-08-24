@@ -1,18 +1,27 @@
 <template>
 <div>
-  <p>
-    <router-link :to="{name:'c1',params:{id:123}}">c1</router-link>
-    <router-link :to="{name:'c2'}">c2</router-link>
-    <router-link :to="{name:'c3'}">c3</router-link>
-  </p>
-  <router-view></router-view>
-  </div>
+  <c1></c1>
+  <c2></c2>
+  <div>{{count}}</div>
+</div>
 </template>
 
 <script>
+import c1 from "./components/c1";
+import c2 from "./components/c2";
+
 export default {
   data() {
     return {};
+  },
+  components: {
+    c1,
+    c2
+  },
+  computed: {
+    count() {
+      return this.$store.state.count;
+    }
   }
 };
 </script>

@@ -1,15 +1,28 @@
 <template>
-  <div>c1{{$route.params.id}}</div>
+<div>
+  <h2>c1</h2>
+  <button @click='clickCall'>click</button>
+  <div>{{getconut}}</div>
+</div>
 </template>
 
 <script>
+import {
+  mapState,mapGetters
+} from 'vuex'
+
 export default {
   data() {
     return {};
   },
   computed: {
-    username() {
-      return this.$route.params.id;
+    ...mapGetters([
+      'getconut'
+    ])
+  },
+  methods: {
+    clickCall() {
+      this.$store.commit('increment',1)
     }
   }
 };
